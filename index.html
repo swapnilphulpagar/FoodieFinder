@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieFinder - Discover Restaurants Near You</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo animate__animated animate__fadeInLeft">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="FoodieFinder Logo">
+                </div>
+                <div class="location animate__animated animate__fadeInDown">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Search for area, street name...">
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#search"><i class="fas fa-search"></i> Search</a></li>
+                    <li><a href="#offers"><i class="fas fa-tag"></i> Offers</a></li>
+                    <li><a href="#help"><i class="fas fa-question-circle"></i> Help</a></li>
+                    <li><a href="#signin"><i class="fas fa-user"></i> Sign In</a></li>
+                    <li><a href="#cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content animate__animated animate__fadeIn">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="FoodieFinder" class="animate__animated animate__pulse animate__infinite">
+                <h2 class="animate__animated animate__fadeInUp">Discover the best food & drinks in your city</h2>
+                <div class="search-bar animate__animated animate__fadeInUp animate__delay-1s">
+                    <select>
+                        <option>Delhi NCR</option>
+                        <option>Mumbai</option>
+                        <option>Bangalore</option>
+                        <option>Hyderabad</option>
+                        <option>Chennai</option>
+                    </select>
+                    <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories" id="categories">
+            <h2 class="section-title animate__animated animate__fadeInLeft">Popular cuisines near you</h2>
+            <div class="category-list">
+                <div class="category-item animate__animated animate__fadeIn animate__delay-1s">
+                    <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="North Indian">
+                    <p>North Indian</p>
+                </div>
+                <div class="category-item animate__animated animate__fadeIn animate__delay-1.2s">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Chinese">
+                    <p>Chinese</p>
+                </div>
+                <div class="category-item animate__animated animate__fadeIn animate__delay-1.4s">
+                    <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="South Indian">
+                    <p>South Indian</p>
+                </div>
+                <div class="category-item animate__animated animate__fadeIn animate__delay-1.6s">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Biryani">
+                    <p>Biryani</p>
+                </div>
+                <div class="category-item animate__animated animate__fadeIn animate__delay-1.8s">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Pizza">
+                    <p>Pizza</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurants" id="restaurants">
+            <h2 class="section-title animate__animated animate__fadeInLeft">Top restaurants near you</h2>
+            <div class="restaurant-grid">
+                <div class="restaurant-card animate__animated animate__fadeInUp">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Burger King">
+                    <div class="restaurant-info">
+                        <h3>Burger King</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 4.2
+                        </div>
+                        <p>American, Fast Food</p>
+                        <p>₹200 for one</p>
+                    </div>
+                </div>
+                <div class="restaurant-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Domino's Pizza">
+                    <div class="restaurant-info">
+                        <h3>Domino's Pizza</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 4.1
+                        </div>
+                        <p>Pizza, Fast Food</p>
+                        <p>₹300 for one</p>
+                    </div>
+                </div>
+                <div class="restaurant-card animate__animated animate__fadeInUp animate__delay-1.2s">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Haldiram's">
+                    <div class="restaurant-info">
+                        <h3>Haldiram's</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 4.3
+                        </div>
+                        <p>North Indian, Sweets</p>
+                        <p>₹250 for one</p>
+                    </div>
+                </div>
+                <div class="restaurant-card animate__animated animate__fadeInUp animate__delay-1.4s">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Bikanervala">
+                    <div class="restaurant-info">
+                        <h3>Bikanervala</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 4.0
+                        </div>
+                        <p>North Indian, Street Food</p>
+                        <p>₹200 for one</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-download" id="app-download">
+            <div class="app-content">
+                <div class="app-text animate__animated animate__fadeInLeft">
+                    <h2>Get the FoodieFinder App</h2>
+                    <p>We will send you a link, open it on your phone to download the app</p>
+                    <div class="radio-buttons">
+                        <label>
+                            <input type="radio" name="app-download" value="email" checked> Email
+                        </label>
+                        <label>
+                            <input type="radio" name="app-download" value="phone"> Phone
+                        </label>
+                    </div>
+                    <div class="app-input">
+                        <input type="text" id="contact-input" placeholder="Email">
+                        <button>Share App Link</button>
+                    </div>
+                    <div class="app-stores">
+                        <p>Download app from</p>
+                        <a href="https://www.apple.com/app-store/" target="_blank">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+                        </a>
+                        <a href="https://play.google.com/store" target="_blank">
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Play Store">
+                        </a>
+                    </div>
+                </div>
+                <div class="app-image animate__animated animate__fadeInRight">
+                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Mobile App">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-column">
+                <h3>About FoodieFinder</h3>
+                <ul>
+                    <li><a href="#about">Who We Are</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#careers">Work With Us</a></li>
+                    <li><a href="#investors">Investor Relations</a></li>
+                    <li><a href="#fraud">Report Fraud</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>FoodieFinder Services</h3>
+                <ul>
+                    <li><a href="#delivery">Food Delivery</a></li>
+                    <li><a href="#dining">Dining Out</a></li>
+                    <li><a href="#pro">FoodieFinder Pro</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>For Restaurants</h3>
+                <ul>
+                    <li><a href="#partner">Partner With Us</a></li>
+                    <li><a href="#business">Business App</a></li>
+                </ul>
+                <h3>For Enterprises</h3>
+                <ul>
+                    <li><a href="#corporate">Corporate Accounts</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Learn More</h3>
+                <ul>
+                    <li><a href="#privacy">Privacy</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#terms">Terms</a></li>
+                    <li><a href="#sitemap">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Social Links</h3>
+                <div class="social-icons">
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+                <div class="app-stores">
+                    <a href="https://www.apple.com/app-store/" target="_blank">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+                    </a>
+                    <a href="https://play.google.com/store" target="_blank">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Play Store">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2023 © FoodieFinder Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation trigger on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.animate__animated');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        const animationClass = element.classList[1];
+                        element.classList.add(animationClass);
+                    }
+                });
+            };
+            
+            // Radio button change handler
+            const contactInput = document.getElementById('contact-input');
+            
+            document.querySelectorAll('input[name="app-download"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    contactInput.placeholder = this.value === 'phone' ? "Phone" : "Email";
+                });
+            });
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Trigger on load for elements in view
+        });
+    </script>
+</body>
+</html>
